@@ -108,7 +108,8 @@ public class UserServlet extends HttpServlet {
                 role = new Role(2, "regular user");
             }
 
-            user = new User(email, fname, lname, pword, role);
+            user = new User(email, fname, lname, pword);
+            user.setRole(role);
 
             if (email.isEmpty() || fname.isEmpty() || lname.isEmpty()
                     || pword.isEmpty()) {
